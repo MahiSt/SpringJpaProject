@@ -5,19 +5,27 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.dressapp.dao.IDressRepository;
+
 import com.dressapp.exceptions.*;
 import com.dressapp.model.Dress;
+import com.dressapp.repository.IDressRepository;
 
 @Service
 public class DressServiceImpl implements IDressService {
 	@Autowired
 	IDressRepository dressRepository;
 
+	/**
+	 * @param dressRepository
+	 */
 	public void setDressRepository(IDressRepository dressRepository) {
 		this.dressRepository = dressRepository;
 	}
 
+
+	/**
+	 *@param dress
+	 */
 	@Override
 	public void addDress(Dress dress){
 		dressRepository.save(dress);

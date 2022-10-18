@@ -1,4 +1,4 @@
-package com.dressapp.dao;
+package com.dressapp.repository;
 
 import java.util.List;
 
